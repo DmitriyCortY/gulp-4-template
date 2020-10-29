@@ -1,0 +1,277 @@
+// breackpoints 
+@mixin xl() {
+    @media screen and (max-width: $xl) {
+        @content;
+    }
+}
+
+@mixin lg() {
+    @media screen and (max-width: $lg) {
+        @content;
+    }
+}
+
+@mixin md() {
+    @media screen and (max-width: $md) {
+        @content;
+    }
+}
+
+@mixin sm() {
+    @media screen and (max-width: $sm) {
+        @content;
+    }
+}
+
+@mixin xs() {
+    @media screen and (max-width: $xs) {
+        @content;
+    }
+}
+
+// grid
+@mixin wrapper() {
+    width: 100%;
+    max-width: #{$container-full};
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: #{$offset};
+    padding-right: #{$offset};
+    @include xl {
+        max-width: #{$container-xl};
+    }
+    @include lg {
+        max-width: #{$container-lg};
+    }
+    @include md {
+        max-width: #{$container-md};
+    }
+    @include sm {
+        max-width: #{$container-sm};
+    }
+    @include xs {
+        max-width: #{$container-xs};
+    }
+}
+
+@mixin row() {
+    margin: #{$offset * -1};
+    width: calc(100% + #{$offset * 2});
+    @include flex-row;
+    @include sm {
+        margin: #{$offset / -2};
+        width: calc(100% + #{$offset});
+    }
+}
+
+@mixin col($n) {
+    width: 100%;
+    max-width: #{((100 / 12) * $n) + '%'};
+    padding: #{$offset};
+    @include sm {
+        padding: #{$offset / 2};
+    }
+}
+
+@mixin col-xl($n) {
+    @include xl() {
+        max-width: #{((100 / 12) * $n) + '%'};
+    }
+}
+
+@mixin col-lg($n) {
+    @include lg() {
+        max-width: #{((100 / 12) * $n) + '%'};
+    }
+}
+
+@mixin col-md($n) {
+    @include md() {
+        max-width: #{((100 / 12) * $n) + '%'};
+    }
+}
+
+@mixin col-sm($n) {
+    @include sm() {
+        max-width: #{((100 / 12) * $n) + '%'};
+    }
+}
+
+@mixin col-xs($n) {
+    @include xs() {
+        max-width: #{((100 / 12) * $n) + '%'};
+    }
+}
+
+@mixin flex-row($wrap: wrap) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: $wrap;
+}
+
+@mixin flex-colm($wrap: wrap) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: $wrap;
+}
+
+@mixin flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin inh() {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+@mixin hover {
+    cursor: pointer;
+    transition: $t;
+    &:hover {
+        @content;
+    }
+}
+
+@mixin before {
+    position: relative;
+    &:before {
+        content: "";
+        @content;
+    }
+}
+
+@mixin after {
+    position: relative;
+    &:after {
+        content: "";
+        @content;
+    }
+}
+
+// typography
+@mixin title-lg {
+    font-size: 44px;
+    line-height: 1.227;
+    @include xl {
+        font-size: 41px;
+    }
+    @include lg {
+        font-size: 38px;
+    }
+    @include md {
+        font-size: 35px;
+    }
+    @include sm {
+        font-size: 32px;
+    }
+    @include xs {
+        font-size: 29px;
+    }
+}
+
+@mixin title-h1 {
+    font-size: 36px;
+    line-height: 1.222;
+    @include xl {
+        font-size: 33px;
+    }
+    @include lg {
+        font-size: 30px;
+    }
+    @include md {
+        font-size: 27px;
+    }
+    @include sm {
+        font-size: 24px;
+    }
+    @include xs {
+        font-size: 22px;
+    }
+}
+
+@mixin title-h2 {
+    font-size: 28px;
+    line-height: 1.222;
+    @include lg {
+        font-size: 36px;
+    }
+    @include md {
+        font-size: 24px;
+    }
+    @include sm {
+        font-size: 22px;
+    }
+    @include xs {
+        font-size: 20px;
+    }
+}
+
+@mixin title-h3 {
+    font-size: 24px;
+    line-height: 1.222;
+    @include md {
+        font-size: 22px;
+    }
+    @include sm {
+        font-size: 20px;
+    }
+    @include xs {
+        font-size: 18px;
+    }
+}
+
+@mixin title-h4 {
+    font-size: 20px;
+    line-height: 1.222;
+    @include sm {
+        font-size: 18px;
+    }
+    @include xs {
+        font-size: 16px;
+    }
+}
+
+@mixin title-h5 {
+    font-size: 18px;
+    line-height: 1.222;
+    @include xs {
+        font-size: 16px;
+    }
+}
+
+@mixin title-h6 {
+    font-size: 14px;
+    line-height: 1.222;
+}
+
+@mixin text-lg {
+    font-size: 22px;
+    line-height: 1.5;
+    @include md {
+        font-size: 20px;
+    }
+    @include xs {
+        font-size: 18px;
+    }
+}
+
+@mixin text-md {
+    font-size: 16px;
+    line-height: 1.25;
+    @include sm {
+        font-size: 14px;
+    }
+}
+
+@mixin text-sm {
+    font-size: 14px;
+    line-height: 2;
+}
+
+@mixin text-xs {
+    font-size: 12px;
+    line-height: 1.25;
+}

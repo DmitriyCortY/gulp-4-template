@@ -1,0 +1,74 @@
+strong {
+    font-weight: 900;
+}
+
+textarea {
+    resize: vertical;
+}
+
+a:active {
+    color: unset;
+}
+
+a:visited {
+    color: unset;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: $font;
+    width: 100%;
+    background-color: #f2f4f6;
+}
+
+img {
+    max-width: 100%;
+}
+
+h2 {
+    @include title-h1;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: #{$offset};
+}
+
+h2 {
+    @include title-h2;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: #{$offset};
+}
+
+h3 {
+    @include title-h3;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: #{$offset};
+}
+
+h4 {
+    @include title-h4;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: #{$offset};
+}
+
+h5 {
+    @include title-h5;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: #{$offset};
+}
+
+h6 {
+    @include title-h6;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: #{$offset};
+}
