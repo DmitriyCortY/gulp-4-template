@@ -1,3 +1,5 @@
+@import "../lib/normalize.css";
+
 @import "_fonts";
 @import "_var";
 @import "_mixins.scss";
@@ -5,19 +7,19 @@
 @import "_glob-modifiers";
 @import "main/**/*.scss";
 @import "simple/**/*.scss";
-@import "advanced/**/*.scss";
+@import "components/**/*.scss";
 @media (hover: hover) {
      ::-webkit-scrollbar {
         width: 3px;
         height: 3px;
-        background: $secondary;
+        background: map-get($colors, 'light');
     }
      ::-webkit-scrollbar-thumb {
-        background: $primary;
+        background: map-get($colors, 'dark');
     }
 }
 
 ::selection {
-    background-color: $primary;
-    color: $light;
+    background-color: map-get($colors, 'dark');
+    color: map-get($colors, 'light');
 }

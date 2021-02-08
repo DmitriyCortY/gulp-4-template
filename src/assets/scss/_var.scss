@@ -1,31 +1,36 @@
-//colors
-$primary: #0099e5; //
-$secondary: #8FA7B3; //
-$light: #ffffff; //
-$dark: #000000; //
-$gray: #e1e4e5; //
-$muted: #f7f9fa; //
-$red: #ff5555; //
-$green: #00e593; //
+$colors: (
+  'danger': #ff5555,
+  'success': #5bb303,
+  'info': #007AD0,
+  'warning': #FFAD00,
+  'muted': #6D8593,
+  'light': #f9f9f9,
+  'white': #ffffff,
+  'dark': #1d1d1f,
+  'black': #000000,
+);
+
 //fonts
 $font2: "Montserrat",
 sans-serif;
-$font: 'Montserrat Alternates',
+$font: 'Circe',
 sans-serif;
 //
 $t: all 0.25s ease;
 // breakpoints
-$xl: 1440px;
-$lg: 1170px;
-$md: 960px;
-$sm: 780px;
-$xs: 560px;
+$breackpoints: (
+  'xl': 1410px,
+  'lg': 1170px,
+  'md': 960px,
+  'sm': 780px,
+  'xs': 560px
+);
 // grid
-$container-full: $xl;
-$container-xl: $lg;
-$container-lg: $md;
-$container-md: $sm;
-$container-sm: $xs;
+$container-full: map-get($breackpoints, 'xl');
+$container-xl: map-get($breackpoints, 'lg');
+$container-lg: map-get($breackpoints, 'md');
+$container-md: map-get($breackpoints, 'sm');
+$container-sm: map-get($breackpoints, 'xs');
 $container-xs: 420px;
 $cols: 12;
 $offset: 15px;
@@ -34,3 +39,6 @@ $radius-lg: 50px;
 $radius-md: 25px;
 $radius-sm: 15px;
 $radius-xs: 5px;
+$radius-round: 50%;
+// displays
+$dislplays: flex, inline-flex, block, inline-block, inline, none;

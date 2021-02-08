@@ -10,3 +10,72 @@
     700 - Bold
     800 - Extra Bold (Ultra Bold)
     900 - Black (Heavy)  */
+
+
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../font/Circe/Circe-Thin.eot');
+  src: local('Circe Thin'), local('Circe-Thin'),
+  url('../font/Circe/Circe-Thin.eot?#iefix') format('embedded-opentype'),
+  url('../font/Circe/Circe-Thin.woff') format('woff'),
+  url('../font/Circe/Circe-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../font/Circe/Circe-ExtraLight.eot');
+  src: local('Circe ExtraLight'), local('Circe-ExtraLight'),
+  url('../font/Circe/Circe-ExtraLight.eot?#iefix') format('embedded-opentype'),
+  url('../font/Circe/Circe-ExtraLight.woff') format('woff'),
+  url('../font/Circe/Circe-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../font/Circe/Circe-Light.eot');
+  src: local('Circe Light'), local('Circe-Light'),
+  url('../font/Circe/Circe-Light.eot?#iefix') format('embedded-opentype'),
+  url('../font/Circe/Circe-Light.woff') format('woff'),
+  url('../font/Circe/Circe-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../font/Circe/Circe-Regular.eot');
+  src: local('Circe'), local('Circe-Regular'),
+  url('../font/Circe/Circe-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../font/Circe/Circe-Regular.woff') format('woff'),
+  url('../font/Circe/Circe-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../font/Circe/Circe-Bold.eot');
+  src: local('Circe Bold'), local('Circe-Bold'),
+  url('../font/Circe/Circe-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../font/Circe/Circe-Bold.woff') format('woff'),
+  url('../font/Circe/Circe-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../font/Circe/Circe-ExtraBold.eot');
+  src: local('Circe ExtraBold'), local('Circe-ExtraBold'),
+  url('../font/Circe/Circe-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('../font/Circe/Circe-ExtraBold.woff') format('woff'),
+  url('../font/Circe/Circe-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
